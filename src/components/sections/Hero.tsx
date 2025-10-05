@@ -55,13 +55,10 @@ export default function Hero() {
             }}
             className="absolute inset-0"
           >
-            <Image
+            <img
               src={backgroundImages[currentImageIndex]}
               alt={`DEVCHEKWAS Project ${currentImageIndex + 1}`}
-              fill
               className="object-cover object-center"
-              priority={currentImageIndex === 0}
-              quality={90}
             />
           </motion.div>
         </AnimatePresence>

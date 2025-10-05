@@ -57,11 +57,10 @@ export default function Leadership() {
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
               {/* Image Container */}
               <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                <Image
+                <img
                   src={leader.image}
                   alt={leader.name}
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500 w-full h-full"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gradient Overlay on Hover */}

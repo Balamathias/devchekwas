@@ -80,12 +80,10 @@ export default function Gallery() {
             )}
 
             {/* Image */}
-            <Image
+            <img
               src={image.src}
               alt={image.alt}
-              fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover transition-all duration-500 group-hover:scale-110"
+              className="object-cover transition-all duration-500 group-hover:scale-110 "
               loading="lazy"
               onLoad={() => setImageLoaded((prev) => ({ ...prev, [index]: true }))}
             />
@@ -161,13 +159,11 @@ export default function Gallery() {
               className="relative w-full h-full max-w-6xl max-h-[90vh] flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
+              <img
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
-                fill
-                className="object-contain"
+                className="object-contain max-w-full max-h-full rounded-lg"
                 sizes="100vw"
-                priority
               />
             </motion.div>
           </motion.div>

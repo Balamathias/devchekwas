@@ -45,12 +45,10 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
           >
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
-              <Image
+              <img
                 src="/logo.png"
                 alt="DV Logo"
-                fill
-                className="object-contain"
-                priority
+                className="object-contain w-full h-full"
               />
             </div>
             <div className="flex flex-col leading-tight">
