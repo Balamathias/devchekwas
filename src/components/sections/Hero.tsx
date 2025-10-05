@@ -85,7 +85,7 @@ export default function Hero() {
             className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
               index === currentImageIndex
                 ? "bg-primary h-8"
-                : "bg-white/50 hover:bg-white/80"
+                : "bg-yellow-500/60 hover:bg-yellow-500/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
