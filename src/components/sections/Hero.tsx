@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Background Image with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/gallery/picture-22.jpeg"
+          src="/gallery/picture-6.jpeg"
           alt="DEVCHEKWAS Team"
           fill
           className="object-cover object-center"
