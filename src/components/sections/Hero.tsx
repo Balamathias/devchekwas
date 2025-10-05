@@ -58,7 +58,7 @@ export default function Hero() {
             <img
               src={backgroundImages[currentImageIndex]}
               alt={`DEVCHEKWAS Project ${currentImageIndex + 1}`}
-              className="object-cover object-center"
+              className="object-cover object-center w-full h-full"
             />
           </motion.div>
         </AnimatePresence>

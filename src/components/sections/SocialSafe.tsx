@@ -140,13 +140,11 @@ export default function SocialSafe() {
                   }}
                   className="absolute inset-0"
                 >
-                  <Image
+                  <img
                     src={projectImages[currentSlide]}
                     alt={`Social SAFE Project ${currentSlide + 1}`}
-                    fill
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority={currentSlide === 0}
                   />
                 </motion.div>
               </AnimatePresence>
