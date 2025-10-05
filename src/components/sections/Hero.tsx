@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Building2, Users } from "lucide-react";
+import Image from "next/image";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
@@ -13,9 +14,25 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-white via-gray-50 to-green-50 overflow-hidden pt-20">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      {/* Background Image with Professional Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/gallery/picture-22.jpeg"
+          alt="DEVCHEKWAS Team"
+          fill
+          className="object-cover object-center"
+          priority
+          quality={90}
+        />
+        {/* Multi-layer Gradient Overlay for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/95 to-white/85 lg:to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-transparent to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3" />
+      </div>
+
+      {/* Animated Pattern Overlay */}
+      <div className="absolute inset-0 z-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-blob" />
         <div className="absolute top-40 right-10 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
@@ -164,12 +181,12 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-2"
+          className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-2 bg-white/50 backdrop-blur-sm"
         >
           <motion.div className="w-1 h-2 bg-primary rounded-full" />
         </motion.div>
