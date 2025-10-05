@@ -1,30 +1,71 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Award, Building2, Users } from "lucide-react";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
+// Select 10 diverse images from gallery for background slideshow
+const backgroundImages = [
+  "/gallery/picture-1.jpeg",
+  "/gallery/picture-5.jpeg",
+  "/gallery/picture-7.jpeg",
+  "/gallery/picture-10.jpeg",
+  "/gallery/picture-12.jpeg",
+  "/gallery/picture-15.jpeg",
+  "/gallery/picture-18.jpeg",
+  "/gallery/picture-20.jpeg",
+  "/gallery/picture-22.jpeg",
+  "/gallery/picture-24.jpeg",
+];
+
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const stats = [
     { icon: Building2, value: "9+", label: "Service Categories" },
     { icon: Award, value: "Since 2023", label: "CAC Registered" },
     { icon: Users, value: "B2B & B2G", label: "Trusted Partner" },
   ];
 
+  // Auto-advance slideshow every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Background Image with Professional Overlay */}
+      {/* Background Image Slideshow with Professional Overlay */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/gallery/picture-6.jpeg"
-          alt="DEVCHEKWAS Team"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={90}
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.43, 0.13, 0.23, 0.96],
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={backgroundImages[currentImageIndex]}
+              alt={`DEVCHEKWAS Project ${currentImageIndex + 1}`}
+              fill
+              className="object-cover object-center"
+              priority={currentImageIndex === 0}
+              quality={90}
+            />
+          </motion.div>
+        </AnimatePresence>
+
         {/* Multi-layer Gradient Overlay for Readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/95 to-white/85 lg:to-white/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-transparent to-white/70" />
@@ -36,6 +77,22 @@ export default function Hero() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-blob" />
         <div className="absolute top-40 right-10 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
+      </div>
+
+      {/* Slideshow Indicators */}
+      <div className="absolute bottom-24 right-8 z-10 flex flex-col gap-2">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+              index === currentImageIndex
+                ? "bg-primary h-8"
+                : "bg-white/50 hover:bg-white/80"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       <Container className="relative z-10">
@@ -51,7 +108,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full"
+              className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full"
             >
               <span className="text-primary font-semibold text-sm">
                 🇳🇬 Proudly Nigerian • CAC Registered
