@@ -112,12 +112,12 @@ export default function About() {
                   March 2023
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <div className="text-sm text-gray-600">Tax ID</div>
                 <div className="text-lg font-bold text-gray-900">
                   31330201-0001
                 </div>
-              </div>
+              </div> */}
               <div>
                 <div className="text-sm text-gray-600">Status</div>
                 <div className="text-lg font-bold text-primary">Active</div>
@@ -192,7 +192,7 @@ export default function About() {
           </motion.div>
 
           {/* Leadership Note */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -216,7 +216,7 @@ export default function About() {
                 - Director & Company Secretary
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </Section>

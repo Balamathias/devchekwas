@@ -132,7 +132,7 @@ export default function Hero() {
               className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               DEVCHEKWAS GLOBAL LIMITED delivers excellence across construction,
-              IT, agriculture, oil & gas, and business solutions. Serving
+              IT, agriculture, oil & gas, Consultancy, and business solutions. Serving
               government and private sectors nationwide.
             </motion.p>
 

@@ -99,7 +99,7 @@ export default function SocialSafe() {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Social SAFE{" "}
+            Social SAFEGUARD{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Consultant
             </span>

@@ -9,7 +9,7 @@ const leaders = [
   {
     name: "Olo Onwuchekwa Williams",
     role: "Director",
-    description: "Principal Director and majority shareholder with extensive experience in multi-sector business development and strategic management.",
+    description: "Principal Director with extensive experience in multi-sector business development and strategic management.",
     image: "/partners/williams.jpeg",
     stake: "80% Shareholder",
   },
@@ -67,13 +67,13 @@ export default function Leadership() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Badge */}
-                <div className="absolute top-4 right-4">
+                {/* <div className="absolute top-4 right-4">
                   <div className="px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full shadow-lg">
                     <span className="text-xs font-semibold text-primary">
                       {leader.stake}
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
