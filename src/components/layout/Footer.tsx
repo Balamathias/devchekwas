@@ -186,7 +186,7 @@ export default function Footer() {
                     href="mailto:devchekwasgloballtd@gmail.com"
                     className="text-gray-400 hover:text-primary transition-colors break-all"
                   >
-                    devchekwasgloballtd@gmail.com
+                    info@devchekwas.com
                   </a>
                 </li>
               </ul>

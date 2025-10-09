@@ -60,8 +60,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      details: ["devchekwasgloballtd@gmail.com"],
-      link: "mailto:devchekwasgloballtd@gmail.com",
+      details: ["info@devchekwas.com"],
+      link: "mailto:info@devchekwas.com",
     },
     {
       icon: MapPin,
