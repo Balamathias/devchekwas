@@ -99,14 +99,14 @@ export default function SocialSafe() {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Social SAFEGUARD{" "}
+            Environmental and Social Safeguards{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Consultant
             </span>
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            As Social Safeguard and Environmental (SAFE) Consultants, we conducted
+            As Environmental and Social Safeguards Consultants, we conducted
             comprehensive on-site assessments, stakeholder engagement, and
             environmental impact evaluations. Our team delivered professional
             consultancy services ensuring regulatory compliance, community safety,

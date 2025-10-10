@@ -6,7 +6,7 @@ import { X, ChevronLeft, ChevronRight, ZoomIn, GraduationCap, Users, Award } fro
 import Section from "../ui/Section";
 
 // Generate array of 58 training images
-const trainingImages = Array.from({ length: 58 }, (_, i) => ({
+const trainingImages = Array.from({ length: 12 }, (_, i) => ({
   src: `/trainings/picture-${i + 1}.jpeg`,
   alt: `Environmental and Social Safeguards Training ${i + 1}`,
 }));
@@ -123,9 +123,9 @@ export default function TrainingGallery() {
             onClick={() => openLightbox(index)}
           >
             {/* Loading Skeleton */}
-            {!loadedImages.has(index) && (
+            {/* {!loadedImages.has(index) && (
               <div className="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 animate-pulse" />
-            )}
+            )} */}
 
             {/* Image */}
             <img
