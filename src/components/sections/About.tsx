@@ -106,12 +106,12 @@ export default function About() {
                 <div className="text-sm text-gray-600">RC Number</div>
                 <div className="text-lg font-bold text-gray-900">6910062</div>
               </div>
-              <div>
+              {/* <div>
                 <div className="text-sm text-gray-600">Established</div>
                 <div className="text-lg font-bold text-gray-900">
                   March 2023
                 </div>
-              </div>
+              </div> */}
               {/* <div>
                 <div className="text-sm text-gray-600">Tax ID</div>
                 <div className="text-lg font-bold text-gray-900">
