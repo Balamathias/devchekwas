@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <SocialSafe />
       <About />
-      <Leadership />
+      {/* <Leadership /> */}
       <Services />
       <TrainingGallery />
       <Gallery />

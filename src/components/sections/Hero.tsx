@@ -26,7 +26,7 @@ export default function Hero() {
 
   const stats = [
     { icon: Building2, value: "9+", label: "Service Categories" },
-    { icon: Award, value: "Since 2023", label: "CAC Registered" },
+    // { icon: Award, value: "Since 2023", label: "CAC Registered" },
     { icon: Users, value: "B2B & B2G", label: "Trusted Partner" },
   ];
 
