@@ -76,7 +76,7 @@ export default function About() {
             <p>
               <strong className="text-gray-900">DEVCHEKWAS GLOBAL LIMITED</strong>{" "}
               is a multi-sector service provider registered with the Corporate
-              Affairs Commission (CAC) in March 2023. We are headquartered in
+              Affairs Commission (CAC). We are headquartered in
               Abuja, FCT, Nigeria.
             </p>
             <p>

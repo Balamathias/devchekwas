@@ -76,12 +76,12 @@ export default function Footer() {
                 <p>
                   <strong className="text-white">RC:</strong> 6910062
                 </p>
-                <p>
+                {/* <p>
                   <strong className="text-white">Tax ID:</strong> 31330201-0001
-                </p>
-                <p>
+                </p> */}
+                {/* <p>
                   <strong className="text-white">Est:</strong> March 2023
-                </p>
+                </p> */}
               </div>
             </motion.div>
 
